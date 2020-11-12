@@ -30,7 +30,7 @@ function Form() {
     password: Yup.string().required("Password is required"),
     terms: Yup.boolean().oneOf([false], "Your consent is required"),
   });
-
+  ///
   useEffect(() => {
     formSchema.isValid(formState).then((valid) => setButtonDisabled(valid));
   }, [formState]);
