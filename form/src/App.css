@@ -34,6 +34,7 @@ button {
   width: 200px;
   height: 40px;
   margin-left: 10%;
+  margin-top: 10%;
 }
 form {
   margin-top: 6%;
@@ -56,13 +57,16 @@ input {
   justify-content: space-evenly;
 }
 .large {
+  margin-bottom: 2%;
   width: 80%;
   height: 5vh;
 }
 .small {
+  margin-bottom: 2%;
   width: 30%;
   height: 5vh;
 }
 .checkbox {
   display: inline;
+  justify-content: flex-start;
 }
