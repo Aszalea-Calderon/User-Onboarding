@@ -19,7 +19,7 @@ function Form() {
   const [errors, setErrors] = useState({ ...defaultState, terms: "" });
 
   //Setting up Button state
-  const [buttonDisabled, setButtonDisabled] = useState(true);
+  const [buttonDisabled, setButtonDisabled] = useState(false); //This
 
   //formState Schema, this is form  validation
   let formSchema = Yup.object().shape({
@@ -28,12 +28,16 @@ function Form() {
       .required("Please provide an email")
       .email("This is not a valid email"),
     password: Yup.string().required("Password is required"),
-    terms: Yup.boolean().oneOf([false], "Your consent is required"),
+    terms: Yup.boolean().oneOf([true], "Your consent is required"),
   });
   ///
-  useEffect(() => {
-    formSchema.isValid(formState).then((valid) => setButtonDisabled(valid));
-  }, [formState]);
+  // useEffect(() => {
+  formSchema.isValid(formState).then((valid) => {
+    setButtonDisabled(!valid);
+    console.log(valid, "this is is!");
+  });
+
+  // }, [formState]);
 
   //onSubmit
   const formSubmit = (e) => {
@@ -92,7 +96,6 @@ function Form() {
           label="Email"
           errors={errors}
         />
-
         <br></br>
         <Input
           name="password"
@@ -113,7 +116,6 @@ function Form() {
             <option value="notListed">Not Listed</option>
           </select>
         </label> */}
-
         <label htmlFor="terms">
           Terms and Conditions
           <input
@@ -123,7 +125,6 @@ function Form() {
             errors={errors}
           />
         </label>
-
         {/* <label htmlFor="email">
           Email
           <input
@@ -149,7 +150,7 @@ function Form() {
           />
         </label> */}
         <br></br>
-        <button disabled={buttonDisabled}>Submit</button>
+        <button disabled={buttonDisabled}>Submit</button> {/*this*/}
       </form>
     </>
   );
