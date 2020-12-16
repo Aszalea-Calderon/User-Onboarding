@@ -18,7 +18,6 @@ body {
 }
 
 .sign-up {
-  /* border: 1px solid black; */
   padding-left: 5%;
 }
 
@@ -34,4 +33,36 @@ button {
   color: white;
   width: 200px;
   height: 40px;
+  margin-left: 10%;
+}
+form {
+  margin-top: 6%;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+.sideBySide {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.large {
+  width: 80%;
+  height: 5vh;
+}
+.small {
+  width: 30%;
+  height: 5vh;
+}
+.checkbox {
+  display: inline;
 }
