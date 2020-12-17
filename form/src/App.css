@@ -6,7 +6,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 25%;
+  margin-top: 25vw;
 }
 
 .backgroundSquare {
@@ -34,7 +34,7 @@ button {
   width: 200px;
   height: 40px;
   margin-left: 10%;
-  margin-top: 10%;
+  margin-top: 3%;
 }
 form {
   margin-top: 6%;

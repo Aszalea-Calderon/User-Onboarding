@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+// const [disabled, setDisabled]= useState(true)
+
 const Input = () => {
   const [form, setForm] = useState({
     firstName: "",
@@ -10,7 +12,7 @@ const Input = () => {
     terms: false,
   });
   const change = (e) => {
-    const { value, type, checked, name } = e.target;
+    const { value, type, checked, name } = e.target; //this is taking in all the info from the input, we are pulling out value type, checked and name
     const valueToUse = type === "checkbox" ? checked : value;
     setForm({ ...form, [name]: valueToUse });
   };
